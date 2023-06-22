@@ -6,7 +6,7 @@ fn main() {
     println!("Guess the Number!");
 
     let secret_number = rand::thread_rng().gen_range(1..=100);
-    let mut counter: u32 = 0;
+    let mut counter: u32 = 1;
     loop{
         println!("Guess Count: {counter}");
         println!("Please input your guess.");
@@ -32,7 +32,7 @@ fn main() {
             println!("Too large!")
         },
         Ordering::Equal => {
-            println!("You win!");
+            println!("You win! Guesses: {counter}");
             break;            
             }
         }
